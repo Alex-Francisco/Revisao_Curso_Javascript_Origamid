@@ -39,3 +39,54 @@ document.write(doisParametros('use ( )', 'quando tiver mais de 1 parâmetro'));
 document.write('<br>');
 
 
+const countLetters = word => word.length;
+document.write(countLetters("Alex"));
+
+/* principal diferença entre uma function normal e uma arrow function é a questão
+do This dentro dela */
+
+/*
+class Menu {
+  constructor(menu) {
+    this.menuElement = document.querySelector(menu);
+  }
+  addActiveEvent() {
+    this.menuElement.addEventListener('click', function(event) {
+      event.target.classList.add('active');
+    });
+  }
+}
+*/
+
+/*
+class Menu {
+  constructor(menu) {
+    this.menuElement = document.querySelector(menu);
+    this.activeClass = "active";
+  }
+  addActiveEvent() {
+    this.menuElement.addEventListener('click', function(event) {
+      event.target.classList.add(this.activeClass); // Não funciona, this agora faz referência a this.menuElement
+      // a function() cria um novo this, o caso ele perde a referência de class Menu
+      // com arrow function não é criado um novo this
+    });
+  }
+}
+*/
+
+class Menu {
+  constructor(menu) {
+    this.menuElement = document.querySelector(menu);
+    this.activeClass = "active";
+  }
+  addActiveEvent() {
+    this.menuElement.addEventListener('click', event => {
+      event.target.classList.add(this.activeClass); // Não funciona, this agora faz referência a this.menuElement
+      // a function() cria um novo this, o caso ele perde a referência de class Menu
+      // com arrow function não é criado um novo this
+    });
+  }
+}
+
+const menu = new Menu('.principal');
+menu.addActiveEvent();
