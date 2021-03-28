@@ -4,3 +4,9 @@ function showList(empresa, ...clientes) {
 }
 
 showList("Origamid", "João", "Maria", 10);
+
+
+// spread
+
+const numeros = [1, 2, 4, 29, 32, 2, 45, 3];
+console.log(Math.max(...numeros)); // espalha a array numeros, seria o mesmo quer passar de um em um (1, 2, 4, ...)
