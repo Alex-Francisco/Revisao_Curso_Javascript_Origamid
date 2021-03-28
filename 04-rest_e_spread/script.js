@@ -51,3 +51,13 @@ const itens3 = document.querySelectorAll('li');
 });
 
 console.log(itens3);
+
+
+// clonar objetos (não é uma cópia perfeita)
+
+const carro = { cor: "Azul", portas: 4, ano: 2020 };
+
+const cloneCarro = { ...carro, turbo: true };
+
+console.log(carro);
+console.log(cloneCarro);
