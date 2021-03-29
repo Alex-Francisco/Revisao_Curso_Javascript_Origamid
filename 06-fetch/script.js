@@ -4,7 +4,7 @@
 Envia requisições assíncronas para o servidor. Serve para acessarmos / escrevermos dados em apis externas.
 */
 
-fetch("https://ranekapi.origamid.dev/wp-json/api/produto");
+fetch("https://viacep.com.br/ws/01001000/json/");
 
-const requisicao = fetch("https://ranekapi.origamid.dev/wp-json/api/produto");
+const requisicao = fetch("https://viacep.com.br/ws/01001000/json/");
 console.log(requisicao);
