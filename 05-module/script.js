@@ -1,7 +1,5 @@
-//Module
+import { areaQuadrado, perimetroQuadrado } from "../quadrado.js";
 
-/*
-Os módulos servem para quebrarmos o código em diferente
-arquivos, para facilitar a organização e compartilhamento
-de código comum.
-*/
+
+console.log(areaQuadrado(4));
+console.log(perimetroQuadrado(5));
