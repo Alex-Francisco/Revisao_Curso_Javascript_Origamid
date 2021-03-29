@@ -6,5 +6,7 @@ Envia requisições assíncronas para o servidor. Serve para acessarmos / escrev
 
 fetch("https://viacep.com.br/ws/01001000/json/");
 
-const requisicao = fetch("https://viacep.com.br/ws/01001000/json/");
+const requisicao = fetch("https://viacep.com.br/ws/01001000/json/").then(resposta => {
+  console.log(resposta);
+});
 console.log(requisicao);
