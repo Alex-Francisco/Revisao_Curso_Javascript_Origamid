@@ -16,9 +16,12 @@ const precosFiltro = precos.filter(preco => {
   return preco.includes("R$");
 });
 
-const precosNumeros = precosFiltro.map(function(preco) {
-  console.log(preco);
-  return +preco.replace("R$ ", "")
-});
+const precosNumeros = precosFiltro.map(preco => 
+  Number(preco.replace("R$ ", ""))
+);
 
-console.log(precosNumeros);
+const total = precosNumeros.reduce((acc, item) => acc + item);
+
+console.log(total);
+
+
