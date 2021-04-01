@@ -13,8 +13,11 @@ const precos = [
 ];
 
 const precosFiltro = precos.filter(preco => {
-  console.log(preco);
   return preco.includes("R$");
+});
+
+const precosNumeros = precosFiltro.map(function(preco) {
+  console.log(preco);
 });
 
 console.log(precosFiltro);
