@@ -14,4 +14,11 @@ const precos = [
 
 const precosFiltro = precos.filter(function(preco){
   console.log(preco);
+  if (preco === "R$ 400") {
+    return true;
+  } else {
+    return false;
+  }
 });
+
+console.log(precosFiltro);
