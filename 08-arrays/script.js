@@ -18,6 +18,7 @@ const precosFiltro = precos.filter(preco => {
 
 const precosNumeros = precosFiltro.map(function(preco) {
   console.log(preco);
+  return +preco.replace("R$ ", "")
 });
 
-console.log(precosFiltro);
+console.log(precosNumeros);
