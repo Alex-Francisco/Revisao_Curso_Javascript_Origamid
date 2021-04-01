@@ -6,7 +6,8 @@ Fetch retorna uma promisse. É possível criarmos funções assíncronas, que ir
 
 async function fetchCep(url) {
   const response = await fetch(url);
- console.log(response)
+  const jsonBody = await response.json();
+  return jsonBody;
 }
 
 //adicionando await, ele espera a promessa ser resolvida para retornar o valor dela
