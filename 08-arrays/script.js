@@ -12,13 +12,9 @@ const precos = [
   "Meus dados"
 ];
 
-const precosFiltro = precos.filter(function(preco){
+const precosFiltro = precos.filter(preco => {
   console.log(preco);
-  if (preco === "R$ 400") {
-    return true;
-  } else {
-    return false;
-  }
+  return preco.includes("R$");
 });
 
 console.log(precosFiltro);
