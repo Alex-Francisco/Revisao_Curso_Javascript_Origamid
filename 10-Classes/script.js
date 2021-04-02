@@ -11,6 +11,9 @@ class SmoothScroll {
     const href = event.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
     console.log(section.offsetTop);
+    window.scrollTo({
+      top: section.offsetTop
+    });
   }
   addClickEvent() {
     this.linkElements.forEach(link => {
