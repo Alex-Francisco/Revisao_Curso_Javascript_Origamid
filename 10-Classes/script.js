@@ -7,7 +7,10 @@ class SmoothScroll {
     this.addClickEvent();
   }
   handleClick(event) {
-    console.log(event);
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    console.log(section.offsetTop);
   }
   addClickEvent() {
     this.linkElements.forEach(link => {
