@@ -12,7 +12,8 @@ class SmoothScroll {
     const section = document.querySelector(href);
     console.log(section.offsetTop);
     window.scrollTo({
-      top: section.offsetTop
+      top: section.offsetTop,
+      behavior: "smooth"
     });
   }
   addClickEvent() {
