@@ -6,9 +6,12 @@ class SmoothScroll {
 
     this.addClickEvent();
   }
+  handleClick(event) {
+    console.log(event);
+  }
   addClickEvent() {
     this.linkElements.forEach(link => {
-      link.addEventListener("click", () => console.log("teste"));
+      link.addEventListener("click", this.handleClick);
     })
   }
 }
