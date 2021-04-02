@@ -1,13 +1,13 @@
 // Classes
 
 class SmoothScroll {
-  constructor() {
-    this.link = "http";
+  constructor(links) {
+    this.linkElements = document.querySelectorAll(links);
   }
 }
 
-const scroll = new SmoothScroll();
-console.log(scroll.link);
+const scroll = new SmoothScroll("a[href^='#']");
+console.log(scroll.linkElements);
 
 
 
