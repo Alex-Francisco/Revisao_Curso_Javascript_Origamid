@@ -1,12 +1,13 @@
 // Classes
 
-const grupoA = 100;
-const grupoB = 300;
+class SmoothScroll {
+  constructor() {
+    this.link = "http";
+  }
+}
 
-const vencedor = grupoA > grupoB ? "Grupo A Ganhou" : "Grupo B Ganhou"; // ternário é uma expressão, bloco de if não 
-console.log(vencedor);
-
-const areaQuadrado = l => l * l; // <- também é uma expressão
+const scroll = new SmoothScroll();
+console.log(scroll.link);
 
 
 
